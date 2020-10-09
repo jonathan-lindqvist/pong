@@ -24,9 +24,23 @@ public class Pong {
     // TODO More attributes
     private int pointsLeft;
     private int pointsRight;
+    private Paddle leftPaddle;
+    private Paddle rightPaddle;
+    private Ball ball;
 
 
     // TODO Constructor
+    public Pong(Paddle leftPaddle, Paddle rightPaddle, Ball ball, int pointsLeft, int pointsRight){
+        this.leftPaddle = leftPaddle;
+        this.rightPaddle = rightPaddle;
+        this.ball = ball;
+        this.pointsLeft = pointsLeft;
+        this.pointsRight = pointsRight;
+    }
+
+    public Pong(Paddle leftPaddle, Paddle rightPaddle, Ball ball){
+        this(leftPaddle, rightPaddle, ball, 0,0);
+    }
 
     // --------  Game Logic -------------
 
@@ -43,6 +57,9 @@ public class Pong {
     public List<IPositionable> getPositionables() {
         List<IPositionable> drawables = new ArrayList<>();
         // TODO
+        drawables.add(leftPaddle);
+        drawables.add(rightPaddle);
+        drawables.add(ball);
         return drawables;
     }
 

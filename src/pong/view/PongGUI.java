@@ -109,11 +109,12 @@ public class PongGUI extends Application implements IEventHandler {
         renderBackground();
 
         // Build the model
-        Paddle rightPaddle = null;
-        Paddle leftPaddle = null;
+        Paddle rightPaddle = new Paddle(560,200);
+        Paddle leftPaddle = new Paddle(40,200);
+        Ball ball = new Ball();
 
         // TODO Create objects and connect to a full object model
-
+        pong = new Pong(leftPaddle, rightPaddle, ball);
 
         // Map objects to sprites
         assets.bind(rightPaddle, assets.rightPaddle);

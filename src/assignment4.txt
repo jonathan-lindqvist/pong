@@ -67,7 +67,7 @@ a. Decide which data (instance variables) and methods needed in Ball and Paddle.
    NOTE: Anything you intend to draw on screen must implement interface IPositionable
 
 b. If needed, create some test for the classes in test/pong directory. Or
-   do it later when needed.
+   do it later when needed. //TODO
 
 c. Now concentrate on class Pong. Pong should have references to a Ball object
    and two paddle objects (and more). Add a constructor that takes the objects as
