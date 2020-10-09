@@ -49,6 +49,7 @@ public class Pong {
     public void update(long now) {
 
        // tODO Gamelogic here
+        ball.move();
     }
 
 

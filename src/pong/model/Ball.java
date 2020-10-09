@@ -18,6 +18,7 @@ public class Ball extends Movable implements IPositionable{
     private double dx;
     private double dy;
     private double speedMultiplier = 1.05;
+    private Random rand = new Random();
 
 
     public Ball(double dx, double dy) {
@@ -59,6 +60,10 @@ public class Ball extends Movable implements IPositionable{
 
     @Override
     public void move() {
+        if(dy == 0 && dx == 0){
+            //TODO get random direction if it does not have any rand
+
+        }
 
     }
 }
