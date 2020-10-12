@@ -19,6 +19,8 @@ public class Ball extends Movable implements IPositionable{
     private double dy;
     private double speedMultiplier = 1.05;
     private Random rand = new Random();
+    private double speedX;
+    private double speedY;
 
 
     public Ball(double dx, double dy) {
@@ -36,6 +38,9 @@ public class Ball extends Movable implements IPositionable{
         might need direction variable instead of letting speed handle it
          */
         this(0,0);
+        speedX = -1 + (1 - -1) * rand.nextDouble(); // todo speed can be vry close to 0, not good
+        speedY = -1 + (1 - -1) * rand.nextDouble();
+
     }
 
     @Override
@@ -62,8 +67,12 @@ public class Ball extends Movable implements IPositionable{
     public void move() {
         if(dy == 0 && dx == 0){
             //TODO get random direction if it does not have any rand
-
+            dy = speedMultiplier;
+            dx = speedMultiplier;
         }
+
+        posX += speedX;
+        posY += speedY;
 
     }
 }
