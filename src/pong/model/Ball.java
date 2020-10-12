@@ -75,4 +75,21 @@ public class Ball extends Movable implements IPositionable{
         posY += speedY;
 
     }
+
+    // TODO: write test
+    public boolean isOnScreen(double xLimit){
+        if(posX > xLimit || posX < 0){
+            return false;
+        }else{
+            return true;
+        }
+    }
+
+    public boolean wentRight(double xLimit){
+        if(posX>xLimit){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

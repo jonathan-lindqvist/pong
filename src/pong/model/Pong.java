@@ -50,6 +50,16 @@ public class Pong {
 
        // tODO Gamelogic here
         ball.move();
+
+        // We only need to check left or right because in the finished game the ball can not escape upward/downward
+        if(!ball.isOnScreen(GAME_WIDTH)){
+            if(ball.wentRight(GAME_WIDTH)){
+                pointsLeft += 1;
+            }else{
+                pointsRight += 1;
+            }
+            ball = new Ball();
+        }
     }
 
 
